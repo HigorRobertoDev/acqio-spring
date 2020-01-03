@@ -15,20 +15,10 @@ public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-
     private LocalDate date;
-
-
     private LocalDateTime time;
-
-
     private BigDecimal value;
-
-
     private CardEnum cardApplication;
-
-
     private CardStatusEnum status;
 
     public Card() {
