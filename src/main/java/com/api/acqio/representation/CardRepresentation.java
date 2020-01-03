@@ -1,14 +1,13 @@
-package com.api.acqio.dto;
+package com.api.acqio.representation;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class CardDTO {
-
+public class CardRepresentation {
     private Long id;
-    private LocalDate date = LocalDate.now();
-    private LocalDateTime time = LocalDateTime.now();
+    private LocalDate date;
+    private LocalDateTime time;
     private BigDecimal value;
     private String cardApplication;
     private String status;
@@ -25,8 +24,16 @@ public class CardDTO {
         return date;
     }
 
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
     public LocalDateTime getTime() {
         return time;
+    }
+
+    public void setTime(LocalDateTime time) {
+        this.time = time;
     }
 
     public BigDecimal getValue() {

@@ -16,27 +16,30 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    @NotEmpty
+
     private LocalDate date;
 
-    @Column(nullable = false)
-    @NotEmpty
+
     private LocalDateTime time;
 
-    @Column(nullable = false)
-    @NotEmpty
+
     private BigDecimal value;
 
-    @Column(nullable = false)
-    @NotEmpty
+
     private CardEnum cardApplication;
 
-    @Column(nullable = false)
-    @NotEmpty
+
     private CardStatusEnum status;
 
     public Card() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public LocalDate getDate() {
